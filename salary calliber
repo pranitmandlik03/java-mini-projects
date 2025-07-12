@@ -1,0 +1,72 @@
+
+import java.util.Scanner;
+public class salary 
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        
+        double basic,net,gross,deductions,hra,da,medical_allounce,pf,professional_tax,service_tax,income_tax;
+        System.out.println("Enter the Basic salary : ");
+        basic=sc.nextDouble();
+        
+        //Else if ladder start zhala....
+        
+        if(basic==10000)
+        hra=8000;
+        else if(basic<10000)
+        hra=9000;
+        else if(basic>=10000 && basic<=16000)
+        hra=11000;
+        else if(basic>16000 && basic<=25000)
+        hra=15000;
+        else if(basic>25000 && basic<=45000)
+        hra=18000;
+        else
+        hra=19000;
+        da=25*(basic/100);
+        if(basic>=22000)
+        medical_allounce=3*basic/100;
+        else
+        medical_allounce=2*basic/100;
+        gross=basic+hra+da+medical_allounce; //gross zhala
+
+        if(gross<=26000)
+        pf=9*basic/100;
+        else 
+        pf=8*basic/100;  //in deduction
+
+         if (gross<25000)
+        {
+            professional_tax=175;
+            service_tax=125;
+        }
+        else
+        {
+            professional_tax=275;
+            service_tax=175;
+        }
+       
+        if(basic>=20000 && basic<=30000)
+        income_tax=6*basic/100;
+        else if(basic>30000 && basic<=50000)
+        income_tax=7*basic/100;
+        else if(basic>50000 && basic<=75000)
+        income_tax=8.75*basic/100;
+        else if(basic>75000 && basic<=99000)
+        income_tax=9.75*basic/100;
+        else
+       
+       
+        income_tax=11*basic/100;
+        deductions=pf+professional_tax+service_tax+income_tax; //deduction cacln
+
+        net=gross-deductions;
+
+       
+        System.out.println("Gross salary of a employee is: "+gross);
+       
+        System.out.println("Net salary of the employee is: "+net);
+    }
+    
+}
