@@ -1,0 +1,48 @@
+import java.util.*;
+public class mobile 
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc=new Scanner(System.in);    
+        int cost;
+        double gst,com_profit,ditrib_cost,s_cst,travelling,retail_profit;
+        System.out.println("Enter the cost of the Mobile Phone : ");
+        cost=sc.nextInt();
+        if(cost<5000)
+        gst=6*(double)cost/100;
+        else if(cost>=5000 && cost<=8000)
+        gst=7*(double)cost/100;
+        else if(cost>8000 && cost<=13000)
+        gst=8.5*(double)cost/100;
+        else if(cost>13000 && cost<20000)
+        gst=9.5*(double)cost/100;
+        else if(cost>20000 && cost<=35000)
+        gst=11.5*(double)cost/100;
+        else if(cost>35000 && cost<=60000)
+        gst=13*(double)cost/100;
+        else
+        gst=15*(double)cost/100; //pahila loop sampla
+        com_profit=13*(double)cost/100;  
+
+
+        travelling=12*(double)cost/100;
+        if(cost<10000)
+        retail_profit=15*(double)cost/100;
+        else if(cost>=10000 && cost<=20000)
+        retail_profit=17*(double)cost/100;
+        else if(cost>200000 && cost<=35000)
+        retail_profit=18*(double)cost/100;
+        else if(cost>350000 && cost<=60000)
+        retail_profit=12*(double)cost/100;
+        else 
+        retail_profit=13*(double)cost/100;
+        
+        ditrib_cost=travelling+retail_profit;
+
+       s_cst=cost+gst+com_profit+ditrib_cost;
+       System.out.println("Selling cost: "+s_cst);
+
+    }
+
+    
+}
