@@ -1,0 +1,79 @@
+//problem statement 
+//write a program to accept rollno,name,marks of the 5 subjects and then find total marls, percentage and grade result is pass when there is a marks of a student above 40 in a respective sujbect
+//marks above 90 "O" grade above 70 A+,above 60 A above 55 B+,above 50 B, above 40 C
+
+
+import java.io.*;
+class student
+{
+    int m1,m2,m3,m4,m5,rollno,tot_marks;
+        String name, grade,res;
+        double per_marks;
+    void read_data() throws IOException
+    {
+        BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+        rollno=Integer.parseInt(br.readLine());
+        name=br.readLine();
+        m1=Integer.parseInt(br.readLine());
+        m2=Integer.parseInt(br.readLine());
+        m3=Integer.parseInt(br.readLine());
+        m4=Integer.parseInt(br.readLine());
+        m5=Integer.parseInt(br.readLine());        
+    }
+    void find_result()
+    {
+        tot_marks=m1+m2+m3+m4+m5;
+        if(m1>=40 && m2>=40 && m3>=40 && m4>=40 &&m5>=40)
+        {
+        res="PASS";
+        per_marks=(double)tot_marks/500*100;
+        if(per_marks>=90)
+        grade="O";
+        else if(per_marks>=70)
+        grade="A+";
+        else if(per_marks>=60)
+        grade="A";
+        else if(per_marks>=55)
+        grade="B+";
+        else if(per_marks>=50)
+        grade="B";
+        else if(per_marks>=40)
+        grade="C";
+        }
+        else
+        {
+        res="FAIL";
+        per_marks=00;
+        grade="FF"; 
+    }
+    }
+    void print_result()
+    {
+        System.out.println("Result sheet of the student");
+        System.out.println("Rollno,name,marks,total marks,percent,result,grade of the student is");
+        System.out.println(rollno+"\t"+name+"\t"+m1+"\t"+m2+"\t"+m3+"\t"+m4+"\t"+m5+"\t"+tot_marks+"\t"+per_marks+"\t"+res+"\t"+grade);
+    }
+}
+public class resultsheet1
+{
+    public static void main(String args[])throws IOException
+    {
+        
+        student obj1=new student();
+        student obj2=new student();
+        student obj3=new student();
+        System.out.println("Enter the Marks for the first student of his/her five subjects");
+        obj1.read_data(); 
+        obj1.find_result();
+        System.out.println("Enter the Marks for the second student of his/her five subjects");
+        obj2.read_data();
+        obj2.find_result();
+         System.out.println("Enter the Marks for the Third student of his/her five subjects");
+         obj3.read_data();
+         obj3.find_result();
+        obj1.print_result();      
+        obj2.print_result();        
+        obj3.print_result();
+
+    }
+}
