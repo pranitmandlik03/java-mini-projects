@@ -1,0 +1,139 @@
+JAVA Full Stack (Java Developer Course): Mini Project
+Project Title:
+Students Campus Placement Information System
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+(Java Platform/Domain)
+Offered By: Shubhi Computer Classes, Loni
+
+
+File Structures of Java File System (Backend)
+----------------------------------------------------------------------
+1. Students Registration File for storing the primary data of:
+Students Registration for Campus Placement
+---------------------------------------------------------------------
+1.Student's Placement Registration Number(PRN)
+2.Registration Date
+3.Student name
+4.E-Mail ID
+5.Mobile number
+6.Gender 
+7.Birth date
+8.Branch
+9.Year(TE/BE) Number
+10.Expertise Areas
+11.Competitive Awards Information
+
+2. Academic Results File for storing the primary data of:
+Students Academic Results(Semester Wise) of all Semesters
+--------------------------------------------------------------------------------------------
+1. Student's PRN
+2. SSC % marks
+3. HSC/Diploma % marks
+4. Sem-1 CGPA marks
+5. Sem-2 CGPA marks
+6. Sem-3 CGPA marks
+7. Sem-4 CGPA marks
+8. Sem-5 CGPA marks
+9. Sem-6 CGPA marks
+10. Sem-7 CGPA marks
+11. Sem-8 CGPA marks
+12. Number of Active Backlogs
+
+
+3. Certified Courses File for storing the primary data of: 
+Students Additional Certified Courses & Projects
+---------------------------------------------------------------------------
+1. Student's PRN
+2. Course Title
+3. Course Duration       
+4. Platform, domain Information
+5. Highlighted Key Contents in Course
+6. Result in %
+
+4. Job Companies File for storing the primary data of:
+Associated Job Provider Companies
+-------------------------------------------------------- 
+1. Company's ID number
+2. Company name
+3. Office address
+4. City
+5. Contact Person Names
+6. E-mail ID
+7. Mobile Number
+8. Alternative Mobile Number 
+
+5. Scheduled Interview's File for storing the transactional data of:
+Scheduled Campus Interview's
+------------------------------------------------
+1. Scheduled Interview ID Number
+2. Scheduled Interview Date
+3. Company's ID Number
+4. Drive Type (OnCampus, OffCampus, Online)
+5. Eligible Branch Names
+6. Applicable Criteria
+7. Offered Packages(in LPA) Information
+8. Approx. Number of  Vaccancies
+9. Any additional information
+
+6. Student's Performance File for storing the transactional data of:
+Appeared Students for Interviews for different rounds
+----------------------------------------------------------------------------------
+1. Conducted Interview's ID Number
+2. Appeared Student's PRN
+3. Appeared Rounds Information
+4. Student's Performance(below average, average, better, excellent)
+5. Shortlisted Status
+
+7. Shortlisted Student's File for storing the data of:
+Shortlisted Students from Conducted Interviews
+--------------------------------------------------------------------------
+1. Interview's ID Number
+2. Shortlisted Student's PRN
+3. Shortlisted for the Package(in LPA)
+4. Shortlisted for the Designation
+
+8. Interview Wise Selected Students Data
+---------------------------------------------------------------
+1. Interview's ID number
+2. Selected Student's PRN
+3. Offered Package(in LPA)
+4. Offered Designation
+5. Job Role, Duties
+
+
+
+S/w Project development plan:
+-----------------------------------------------
+(Modules, Application Programs)
+---------------------------------------------------
+Module-1: 
+Primary Data Retrieval Module
+1.1   Student Registration for Job Placement (data retrieval form)
+1.2   Registered Students Academic Results (data retrieval form)
+1.3   Registered Students Certified Courses (data retrieval form)
+1.4   Job Provider Companies (data retrieval form)
+
+Module-2:
+Placement Transaction Data Entry Module
+2.1   Scheduled Campus Interview's data entry form
+2.2   Interview-Appeared Student's Performance data entry form
+2.3   Shortlisted Student's(in Interviews) data entry form
+2.4   Interview wise Selected Student's data entry form
+
+Module-3:
+Reports Module
+3.1 Registered Students Information report
+3.2 Students Academic Results Information report
+3.3 Students Certified Courses & Projects Information report
+3.4 Job Provider Companies Information report
+3.5 Scheduled Campus Interview's Periodical Report
+3.6 Interview wise Appeared Student's Performance Report
+3.7 Shortlisted Students Summary Report
+3.8 Placed Students Summary Report
+3.9 Interview (Company) wise Shortlisted Student's Report
+3.10 Interview (Company) wise Placed Students Report
+3.11 Unplaced Student's Information Report
+
+Module-4:
+Close the Project
+4.1 Exit from the Project
